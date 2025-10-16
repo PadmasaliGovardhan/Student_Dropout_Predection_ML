@@ -2,10 +2,10 @@ document.getElementById("predictForm").addEventListener("submit", async function
   e.preventDefault();
 
   const data = {
-    Marital_status: document.getElementById("Marital_status")?.value || 1,
-    Application_mode: document.getElementById("Application_mode")?.value || 8,
+    Marital_status: document.getElementById("Marital_status").value,
+    Application_mode: document.getElementById("Application_mode").value,
     Application_order: 12,
-    Course: document.getElementById("Course")?.value || 2,
+    Course: document.getElementById("Course").value,
     Daytime_evening_attendance: "Evening",
     Previous_qualification: "HighSchool",
     Nacionality: "Domestic",
@@ -17,13 +17,13 @@ document.getElementById("predictForm").addEventListener("submit", async function
     Educational_special_needs: "No",
     Debtor: "Yes",
     Tuition_fees_up_to_date: document.getElementById("Tuition_fees_up_to_date").value,
-    Gender: document.getElementById("Gender")?.value || "Male",
-    Scholarship_holder: document.getElementById("Scholarship_holder")?.value || "No",
-    Age_at_enrollment: parseInt(document.getElementById("Age_at_enrollment")?.value || 20),
+    Gender: "Male",
+    Scholarship_holder: "No",
+    Age_at_enrollment: parseInt(document.getElementById("Age_at_enrollment").value),
     International: "No",
     Curricular_units_1st_sem_credited: 20,
     Curricular_units_1st_sem_enrolled: 50,
-    Curricular_units_1st_sem_evaluations: 20,
+    Curricular_units_1st_sem_evaluations: parseInt(document.getElementById("Curricular_units_1st_sem_evaluations").value),
     Curricular_units_1st_sem_approved: parseInt(document.getElementById("Curricular_units_1st_sem_approved").value),
     Curricular_units_1st_sem_grade: parseFloat(document.getElementById("Curricular_units_1st_sem_grade").value),
     Curricular_units_1st_sem_without_evaluations: 30,
@@ -33,6 +33,7 @@ document.getElementById("predictForm").addEventListener("submit", async function
     Curricular_units_2nd_sem_approved: parseInt(document.getElementById("Curricular_units_2nd_sem_approved").value),
     Curricular_units_2nd_sem_grade: parseFloat(document.getElementById("Curricular_units_2nd_sem_grade").value),
     Curricular_units_2nd_sem_without_evaluations: 25,
+    Unemployment_rate: parseFloat(document.getElementById("Unemployment_rate").value),
     Inflation_rate: 5.0,
     GDP: 15000.0
   };
@@ -49,16 +50,12 @@ document.getElementById("predictForm").addEventListener("submit", async function
     }
 
     const result = await response.json();
-
-    // Log for debugging
     console.log("API response:", result);
 
-    // ✅ FIX HERE
-    // Make sure to access the correct property name
-    let message = result.prediction || result.result || "No prediction found";
+    // Adjust key to match backend’s actual key
+    let message = result.prediction || result.Prediction || result.result || result.output || "No prediction found";
 
     document.getElementById("result").textContent = "📊 Prediction: " + message;
-
   } catch (error) {
     console.error("Error:", error);
     document.getElementById("result").textContent = "❌ Something went wrong. Please try again later.";
