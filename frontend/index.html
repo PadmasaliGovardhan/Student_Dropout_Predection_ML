@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dropout Predictor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Student Dropout Prediction</h1>
+    <form id="predictForm">
+      <div class="form-group">
+        <label>Marital Status:</label>
+        <select id="Marital_status">
+          <option>Single</option>
+          <option>Married</option>
+          <option>Divorced</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Application Mode:</label>
+        <select id="Application_mode">
+          <option>Online</option>
+          <option>Offline</option>
+          <option>Other</option>
+          <option>Special</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Course:</label>
+        <select id="Course">
+          <option>Engineering</option>
+          <option>Science</option>
+          <option>Arts</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Gender:</label>
+        <select id="Gender">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Age at Enrollment:</label>
+        <input type="number" id="Age_at_enrollment" value="21" />
+      </div>
+
+      <div class="form-group">
+        <label>Tuition Fees Up To Date:</label>
+        <select id="Tuition_fees_up_to_date">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Scholarship Holder:</label>
+        <select id="Scholarship_holder">
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+      </div>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <h2 id="result"></h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
