@@ -7,68 +7,69 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <form id="predictForm">
-    <h2>🎓 Student Performance Predictor</h2>
+  <div class="container">
+    <form id="predictForm">
+      <h2>🎓 Student Performance Predictor</h2>
 
-    <label>Course</label>
-    <select id="Course">
-      <option>Engineering</option>
-      <option>Science</option>
-      <option>Management</option>
-      <option>Arts</option>
-    </select>
+      <label>Course</label>
+      <select id="Course">
+        <option>Engineering</option>
+        <option>Science</option>
+        <option>Management</option>
+        <option>Arts</option>
+      </select>
 
-    <label>Marital Status</label>
-    <select id="Marital_status">
-      <option>Single</option>
-      <option>Married</option>
-    </select>
+      <label>Marital Status</label>
+      <select id="Marital_status">
+        <option>Single</option>
+        <option>Married</option>
+      </select>
 
-    <label>Attendance Type</label>
-    <select id="Daytime_evening_attendance">
-      <option>Daytime</option>
-      <option>Evening</option>
-    </select>
+      <label>Attendance Type</label>
+      <select id="Daytime_evening_attendance">
+        <option>Daytime</option>
+        <option>Evening</option>
+      </select>
 
-    <label>Previous Qualification</label>
-    <select id="Previous_qualification">
-      <option>HighSchool</option>
-      <option>Bachelor</option>
-      <option>Diploma</option>
-    </select>
+      <label>Previous Qualification</label>
+      <select id="Previous_qualification">
+        <option>HighSchool</option>
+        <option>Bachelor</option>
+        <option>Diploma</option>
+      </select>
 
-    <label>Gender</label>
-    <select id="Gender">
-      <option>Male</option>
-      <option>Female</option>
-    </select>
+      <label>Gender</label>
+      <select id="Gender">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
 
-    <label>Age at Enrollment</label>
-    <input type="number" id="Age_at_enrollment" value="21" />
+      <label>Age at Enrollment</label>
+      <input type="number" id="Age_at_enrollment" value="21" />
 
-    <label>Tuition Fees Up To Date</label>
-    <select id="Tuition_fees_up_to_date">
-      <option>Yes</option>
-      <option>No</option>
-    </select>
+      <label>Tuition Fees Up To Date</label>
+      <select id="Tuition_fees_up_to_date">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
 
-    <label>Scholarship Holder</label>
-    <select id="Scholarship_holder">
-      <option>No</option>
-      <option>Yes</option>
-    </select>
+      <label>Scholarship Holder</label>
+      <select id="Scholarship_holder">
+        <option>No</option>
+        <option>Yes</option>
+      </select>
 
-    <label>1st Sem Units Approved</label>
-    <input type="number" id="Curricular_units_1st_sem_approved" value="10" />
+      <label>1st Sem Units Approved</label>
+      <input type="number" id="Curricular_units_1st_sem_approved" value="10" />
 
-    <label>2nd Sem Average Grade</label>
-    <input type="number" id="Curricular_units_2nd_sem_grade" step="0.1" value="6.0" />
+      <label>2nd Sem Average Grade</label>
+      <input type="number" id="Curricular_units_2nd_sem_grade" step="0.1" value="6.0" />
 
-    <button type="submit">Predict</button>
-  </form>
+      <button type="submit">Predict</button>
+    </form>
 
-  <div id="result"></div>
-
+    <div id="result"></div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
