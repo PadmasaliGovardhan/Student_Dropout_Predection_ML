@@ -1,7 +1,6 @@
 document.getElementById("predictForm").addEventListener("submit", async function (e) {
   e.preventDefault();
-
-  const data = {
+const data = {
     Marital_status: document.getElementById("Marital_status").value,
     Application_mode: document.getElementById("Application_mode").value,
     Application_order: 12,
@@ -33,10 +32,11 @@ document.getElementById("predictForm").addEventListener("submit", async function
     Curricular_units_2nd_sem_approved: 10,
     Curricular_units_2nd_sem_grade: 5.5,
     Curricular_units_2nd_sem_without_evaluations: 25,
-    Unemployment_rate: 12.0,
+    Unemployment_rate: 12.0,   //<-- REMOVE this line
     Inflation_rate: 5.0,
     GDP: 15000.0
-  };
+};
+
 
   const response = await fetch("https://student-dropout-predection-ml.onrender.com/predict", {
     method: "POST",

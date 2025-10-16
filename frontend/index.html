@@ -8,71 +8,58 @@
 </head>
 <body>
   <div class="container">
-    <h1>🎓 Student Dropout Prediction</h1>
+    <h1>📚 Ready to Discover Your Success Path?</h1>
+    <p class="subtitle">Enter your recent academic stats and get a prediction instantly!</p>
     <form id="predictForm">
       <div class="form-group">
-        <label>Marital Status:</label>
-        <select id="Marital_status">
-          <option>Single</option>
-          <option>Married</option>
-          <option>Divorced</option>
-        </select>
+        <label>📖 2nd Sem Subjects Passed 
+          <span class="tooltip" title="Number of subjects you successfully passed in 2nd semester.">ℹ️</span>
+        </label>
+        <input type="number" min="0" id="Curricular_units_2nd_sem_approved" value="10" />
       </div>
-
       <div class="form-group">
-        <label>Application Mode:</label>
-        <select id="Application_mode">
-          <option>Online</option>
-          <option>Offline</option>
-          <option>Other</option>
-          <option>Special</option>
-        </select>
+        <label>🏅 2nd Sem Average Grade 
+          <span class="tooltip" title="Your average grade (e.g., 5.5) for the 2nd semester.">ℹ️</span>
+        </label>
+        <input type="number" step="0.01" min="0" max="10" id="Curricular_units_2nd_sem_grade" value="5.5" />
       </div>
-
       <div class="form-group">
-        <label>Course:</label>
-        <select id="Course">
-          <option>Engineering</option>
-          <option>Science</option>
-          <option>Arts</option>
-        </select>
+        <label>📖 1st Sem Subjects Passed 
+          <span class="tooltip" title="Number of subjects you successfully passed in 1st semester.">ℹ️</span>
+        </label>
+        <input type="number" min="0" id="Curricular_units_1st_sem_approved" value="10" />
       </div>
-
       <div class="form-group">
-        <label>Gender:</label>
-        <select id="Gender">
-          <option>Male</option>
-          <option>Female</option>
-        </select>
+        <label>🏅 1st Sem Average Grade 
+          <span class="tooltip" title="Your average grade (e.g., 6.0) for the 1st semester.">ℹ️</span>
+        </label>
+        <input type="number" step="0.01" min="0" max="10" id="Curricular_units_1st_sem_grade" value="6.0" />
       </div>
-
       <div class="form-group">
-        <label>Age at Enrollment:</label>
-        <input type="number" id="Age_at_enrollment" value="21" />
+        <label>📝 2nd Sem Subjects Attended 
+          <span class="tooltip" title="Number of evaluation attempts (exams/tests) attended in 2nd semester.">ℹ️</span>
+        </label>
+        <input type="number" min="0" id="Curricular_units_2nd_sem_evaluations" value="25" />
       </div>
-
       <div class="form-group">
-        <label>Tuition Fees Up To Date:</label>
+        <label>👨‍🎓 2nd Sem Subjects Enrolled 
+          <span class="tooltip" title="Number of subjects you enrolled for in 2nd semester.">ℹ️</span>
+        </label>
+        <input type="number" min="0" id="Curricular_units_2nd_sem_enrolled" value="50" />
+      </div>
+      <div class="form-group">
+        <label>💸 Tuition Fees Up To Date 
+          <span class="tooltip" title="Select Yes if your university tuition fees are currently up to date.">ℹ️</span>
+        </label>
         <select id="Tuition_fees_up_to_date">
           <option>Yes</option>
           <option>No</option>
         </select>
       </div>
-
-      <div class="form-group">
-        <label>Scholarship Holder:</label>
-        <select id="Scholarship_holder">
-          <option>No</option>
-          <option>Yes</option>
-        </select>
-      </div>
-
-      <button type="submit">Predict</button>
+      <button type="submit">🔮 Predict My Outcome!</button>
     </form>
-
     <h2 id="result"></h2>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
