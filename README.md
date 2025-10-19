@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/ML-sklearn-yellow?logo=scikit-learn">
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
   <img src="https://img.shields.io/badge/Deployed-Render-informational" alt="Render">
-  <img src="https://img.shields.io/github/stars/your-username/student-dropout-prediction?style=social" alt="GitHub stars">
+  <img src="https://img.shields.io/github/stars/PadmasaliGovardhan/Student_Dropout_Predection_ML?style=social" alt="GitHub stars">
 </p>
 
 <h1 align="center">🎓 Student Dropout Prediction System</h1>
@@ -181,3 +181,4 @@ Special thanks to:
 ---
 
 > **Empowering student success through data + empathy.**
+
